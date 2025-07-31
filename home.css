@@ -319,11 +319,29 @@ body, ul { margin: 0; padding: 0; }
 }
 
 /* Tablets */
-@media (max-width: 768px) {
+@media (max-width: 768px) 
+{
   #navbar { height: 75px; padding: 0 2rem; }
   #navbar .logo { font-size: 2.3rem; }
   .nav-desktop { display: none; }
   #menuToggle { display: block; }
+  /* 1) Give the hero-content some top padding equal to your navbar height */
+  .hero-content {
+    padding-top: 80px;   /* or whatever your #navbar height is */
+  }
+
+  /* 2) Scale back the WELCOME! a bit so it never bleeds under the nav */
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+
+  /* 3) Make sure the text block has breathing room and is centered */
+  .hero-text {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    max-width: 90%;
+    margin: 0 auto;
+  }
 }
 /* Until medium desktop: keep hamburger */
 @media (max-width: 1024px) {
