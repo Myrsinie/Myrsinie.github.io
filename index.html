@@ -1,61 +1,70 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Myrsinie</title>
-  <!-- Bootstrap 5 CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <style>
-    body {
-      background-color: #f8f9fa;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .hero {
-      padding: 3rem 1rem;
-      background: white;
-      border-radius: .5rem;
-      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
-      max-width: 600px;
-      width: 100%;
-    }
-    .hero h1 {
-      font-size: 4rem;
-      margin-bottom: 0.5rem;
-      color: #0B0D3D;
-    }
-    .hero p {
-      font-size: 1.25rem;
-      color: #700304;
-    }
-    .btn-primary {
-      background-color: #700304;
-      border-color: #700304;
-    }
-    .btn-primary:hover {
-      background-color: #0B0D3D;
-      border-color: #0B0D3D;
-    }
-  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyName - Personal Website</title>
+  <meta name="description" content="Welcome to Myrsinie's personal website. Explore my art and photography, read my papers, and learn more about me." />
+  <meta name="keywords" content="Myrsinie, myrsinie, Mirsinie, mirsinie, Social Work, Myrsinie Tsoukala, myrsinie tsoukala, Tsoukala, tsoukala, portfolio, personal website, blog" />
+  <meta name="author" content="Christos Polimatidis" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Myrsinie - Personal Website" />
+  <meta property="og:description" content="Welcome to Myrsinie's personal website. Explore my art and photography, read my papers, and learn more about me." />
+  <meta property="og:url" content="https://myrsinie.github.io/" />
+  <meta property="og:image" content="https://myrsinie.github.io/assets/preview.png" />
+
+  <link rel="stylesheet" href="home.css" />
 </head>
 <body>
+   <!-- NAV -->
+  <header id="navbar">
+    <a href="#home" class="logo">Myrsinie</a>
 
-  <div class="hero">
-    <h1>Myrsinie</h1>
-    <p>Welcome to my personal site.</p>
-    <a href="#about" class="btn btn-primary mt-3">Learn More</a>
-  </div>
+    <!-- desktop links -->
+    <nav class="nav-desktop">
+      <a href="#home" class="active">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#papers">Papers</a>
+      <a href="#art">Art</a>
+      <a href="#photography">Photography</a>
+    </nav>
 
-  <!-- Bootstrap 5 JS bundle (optional for dropdowns, modals, etc.) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- mobile toggle -->
+    <button id="menuToggle" aria-label="Open menu">☰</button>
+  </header>
+
+  <!-- mobile offcanvas menu -->
+  <aside id="mobileMenu">
+    <button class="btn-close" aria-label="Close menu"></button>
+    <ul>
+      <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+      <li><a href="#papers" onclick="toggleMenu()">Papers</a></li>
+      <li><a href="#art" onclick="toggleMenu()">Art</a></li>
+      <li><a href="#photography" onclick="toggleMenu()">Photography</a></li>
+    </ul>
+  </aside>
+
+  <!-- placeholder for page content -->
+  <main style="padding-top: 80px;">
+    <!-- sections with matching IDs: #home, #projects, etc. -->
+  </main>
+
+  <!-- Bootstrap JS bundle for utilities -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBtn = mobileMenu.querySelector('.btn-close');
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle('open');
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+  </script>
 </body>
 </html>
-
