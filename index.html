@@ -1,138 +1,22 @@
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyName - Personal Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Welcome to Myrsinie's personal website. Explore my art and photography, read my papers, and learn more about me." />
-  <meta name="keywords" content="Myrsinie, myrsinie, Mirsinie, mirsinie, Social Work, Myrsinie Tsoukala, myrsinie tsoukala, Tsoukala, tsoukala, portfolio, personal website, blog" />
-  <meta name="author" content="Christos Polimatidis" />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Myrsinie - Personal Website" />
-  <meta property="og:description" content="Welcome to Myrsinie's personal website. Explore my art and photography, read my papers, and learn more about me." />
-  <meta property="og:url" content="https://myrsinie.github.io/" />
-  <meta property="og:image" content="https://myrsinie.github.io/assets/preview.png" />
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Pacifico&display=swap"
-    rel="stylesheet"
-  />
-  
-  <link rel="stylesheet" href="home.css" />
-</head>
-<body>
-   <!-- NAV -->
-  <header id="navbar">
-    <a href="#home" class="logo">Myrsinie</a>
-
-    <!-- desktop links -->
-    <nav class="nav-desktop">
-      <a href="#home" class="active">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#papers">Papers</a>
-      <a href="#art">Art</a>
-      <a href="#photography">Photography</a>
-    </nav>
-
-    <!-- mobile toggle -->
-    <button id="menuToggle" aria-label="Open menu">☰</button>
-  </header>
-
-  <!-- mobile offcanvas menu -->
-  <aside id="mobileMenu">
-    <button class="btn-close" aria-label="Close menu"></button>
-    <ul>
-      <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-      <li><a href="#papers" onclick="toggleMenu()">Papers</a></li>
-      <li><a href="#art" onclick="toggleMenu()">Art</a></li>
-      <li><a href="#photography" onclick="toggleMenu()">Photography</a></li>
-    </ul>
-  </aside>
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">WELCOME!</h1>
-      <div class="hero-text">
-        <p class="hero-subtitle">
-          Hello, I'm Myrsinie —<br/>
-          A student of Social Work, aspiring to make a difference<br/>
-          through empathy, creativity, and action.
-        </p>
-        <p class="hero-tagline">
-          Explore my work in social projects, writing, and the arts.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-  <div class="container about-container">
-    <h2 class="section-heading">About Me</h2>
-    <div class="about-content">
-      <p>
-        I’m originally from <strong>Athens, Greece</strong>, and currently living in
-        <strong>Heraklion, Crete</strong>, where I’m pursuing my university studies.
-        I’m <strong>21 years old</strong> and a former Sociology student at the
-        University of Crete. Currently, I am studying Social Work at the
-        Hellenic Mediterranean University (HMU), driven by a strong interest in
-        social impact and community well-being.
-      </p>
-    </div>
-
-    <!-- placeholder for page content -->
-    <main style="padding-top: 80px;">
-      <!-- sections with matching IDs: #home, #projects, etc. -->
-    </main>
-
-    <h3 class="section-heading">Interests</h3>
-    <div class="interests-grid">
-      <div class="interest-card">
-        <h4>🎓 Social Work</h4>
-        <p>
-          I want to make a direct, positive impact on people’s lives through empathy and support.
-        </p>
-      </div>
-      <div class="interest-card">
-        <h4>🗣️ Social Topics</h4>
-        <p>
-          I’m passionate about mental health, social justice, and equal access to care and resources.
-        </p>
-      </div>
-      <div class="interest-card">
-        <h4>🎨 Creative Expression</h4>
-        <p>
-          I enjoy expressing myself through art, photography, and writing that reflect human experiences.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Bootstrap JS bundle for utilities -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = mobileMenu.querySelector('.btn-close');
-
-    function toggleMenu() {
-      mobileMenu.classList.toggle('open');
-    }
-
-    menuToggle.addEventListener('click', toggleMenu);
-    closeBtn.addEventListener('click', toggleMenu);
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3f0e9" />
+    <meta name="description" content="Myrsinie's personal portfolio — social work, community, creativity, and life in Heraklion, Crete." />
+    <meta property="og:title" content="Myrsinie — For people, for change" />
+    <meta property="og:description" content="Social work, stronger communities, and a kinder tomorrow." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/hero-crete.jpg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=DM+Sans:wght@300;400;500&family=Gloock&display=swap" rel="stylesheet" />
+    <title>Myrsinie — For people, for change</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
