@@ -424,7 +424,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: none;
-    gap: 55px;
+    gap: 48px;
   }
   .studies-copy { max-width: 660px; }
   .studies-copy h2 { font-size: clamp(5rem, 12vw, 6.5rem); }
@@ -438,7 +438,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
   .areas-card {
     z-index: 2;
     width: 74%;
-    margin-top: -145px;
+    margin-top: 0;
     padding: 32px 34px 36px;
     background: rgba(224,220,211,.9);
     -webkit-backdrop-filter: blur(10px);
@@ -502,13 +502,13 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
   .portrait { height: auto; min-height: 0; aspect-ratio: 4 / 5; }
   .about-visual blockquote { margin-top: 28px; font-size: 1.02rem; line-height: 1.5; }
 
-  .studies-layout { min-height: auto; padding: 112px 0 90px; display: flex; flex-direction: column; gap: 42px; }
+  .studies-layout { min-height: auto; padding: 112px 0 90px; display: flex; flex-direction: column; gap: 34px; }
   .studies-copy h2 { margin-bottom: 27px; }
   .studies-copy .eyebrow { margin-bottom: 34px; }
   .studies-photo-wrap { order: 2; width: 88%; align-self: flex-end; }
   .campus { height: auto; min-height: 0; aspect-ratio: 3 / 4; }
   .tape { top: -12px; right: 18px; width: 76px; height: 23px; }
-  .areas-card { order: 3; margin-top: -78px; width: 91%; padding: 25px 22px 28px; background: rgba(224,220,211,.93); }
+  .areas-card { order: 3; margin-top: 0; width: 91%; padding: 25px 22px 28px; background: rgba(224,220,211,.93); }
   .areas-card h3 { font-size: 1.08rem; }
   .areas-card > div { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 18px; font-size: .73rem; }
 
