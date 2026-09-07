@@ -91,15 +91,24 @@ h2 { font-size: clamp(3.3rem, 6vw, 6.8rem); letter-spacing: -.045em; margin-bott
   top: 0;
   left: 0;
   width: 100%;
-  height: 92px;
+  height: 96px;
   padding: 0 clamp(28px, 5vw, 78px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: var(--ink);
-  transition: color .25s ease;
+  background: rgba(246, 243, 237, .84);
+  border-bottom: 1px solid rgba(23, 25, 20, .11);
+  box-shadow: 0 8px 30px rgba(32, 35, 28, .05);
+  -webkit-backdrop-filter: blur(14px) saturate(.85);
+  backdrop-filter: blur(14px) saturate(.85);
+  transition: color .25s ease, background .25s ease, border-color .25s ease;
 }
-.site-header.on-dark { color: #fff; }
+.site-header.on-dark {
+  color: #fff;
+  background: rgba(31, 38, 31, .86);
+  border-bottom-color: rgba(255, 255, 255, .13);
+}
 
 .wordmark, .desktop-nav button, .menu-toggle {
   padding: 0;
@@ -111,7 +120,7 @@ h2 { font-size: clamp(3.3rem, 6vw, 6.8rem); letter-spacing: -.045em; margin-bott
 .wordmark {
   z-index: 2;
   font-family: var(--serif);
-  font-size: 1.22rem;
+  font-size: clamp(1.65rem, 2vw, 2rem);
   letter-spacing: -.02em;
 }
 
@@ -123,8 +132,9 @@ h2 { font-size: clamp(3.3rem, 6vw, 6.8rem); letter-spacing: -.045em; margin-bott
 
 .desktop-nav button {
   position: relative;
-  font-size: .78rem;
-  font-weight: 400;
+  font-size: clamp(.9rem, 1.05vw, 1.02rem);
+  font-weight: 500;
+  letter-spacing: .01em;
 }
 
 .desktop-nav button::after {
@@ -372,6 +382,7 @@ h2 { font-size: clamp(3.3rem, 6vw, 6.8rem); letter-spacing: -.045em; margin-bott
 @media (max-width: 720px) {
   .page-shell { width: min(100% - 38px, 650px); }
   .site-header { height: 70px; padding-inline: 20px; }
+  .wordmark { font-size: 1.55rem; }
   h2 { font-size: clamp(3rem, 15vw, 5rem); }
   .section { min-height: auto; }
   .menu-panel nav { top: 46%; }
